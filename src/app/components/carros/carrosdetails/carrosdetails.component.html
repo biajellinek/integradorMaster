@@ -1,0 +1,95 @@
+<br>
+<div class="conteiner" id="conteiner">
+    <div class="row">
+        <div class="col-lg-10">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="centralizar">Cadastro de Novos Orçamentos</h3>
+                    <br>
+                    <h4>Dados do Emissor:</h4>
+                    <br>
+
+                    <mdb-form-control>
+                        <input mdbInput type="text" id="nomeEmissor" class="form-control" [(ngModel)]="carro.nomeEmissor"/>
+                        <label mdbLabel class="form-label" for="nomeEmissor">Nome: </label>
+                    </mdb-form-control>
+                    <br>
+
+                    <mdb-form-control>
+                        <input mdbInput type="text" id="telefoneEmissor" class="form-control" [(ngModel)]="carro.telefoneEmissor"/>
+                        <label mdbLabel class="form-label" for="telefoneEmissor">Telefone: </label>
+                    </mdb-form-control>
+                    <br>
+
+                    <mdb-form-control>
+                        <input mdbInput type="email" id="emailEmissor" class="form-control" [(ngModel)]="carro.emailEmissor"/>
+                        <label mdbLabel class="form-label" for="emailEmissor">Email: </label>
+                    </mdb-form-control>
+                    <br>
+
+                    <mdb-form-control>
+                        <input mdbInput type="text" id="enderecoEmissor" class="form-control" [(ngModel)]="carro.enderecoEmissor"/>
+                        <label mdbLabel class="form-label" for="enderecoEmissor">Endereço: </label>
+                    </mdb-form-control>
+                    <br>
+
+                    <mdb-form-control>
+                        <input mdbInput type="text" id="cnpjEmissor" class="form-control" [(ngModel)]="carro.cnpjEmissor"/>
+                        <label mdbLabel class="form-label" for="cnpjEmissor">CNPJ: </label>
+                    </mdb-form-control>
+                    <br>
+
+                    <h4>Dados do Responsável:</h4>
+                    <br>
+
+                    <mdb-form-control>
+                        <input mdbInput type="text" id="nomeResponsavel" class="form-control" [(ngModel)]="carro.nomeResponsavel"/>
+                        <label mdbLabel class="form-label" for="nomeResponsavel">Nome: </label>
+                    </mdb-form-control>
+                    <br>
+
+                    <mdb-form-control>
+                        <input mdbInput type="text" id="enderecoResponsavel" class="form-control" [(ngModel)]="carro.enderecoResponsavel"/>
+                        <label mdbLabel class="form-label" for="enderecoResponsavel">Endereço: </label>
+                    </mdb-form-control>
+                    <br>
+
+                    <mdb-form-control>
+                        <input mdbInput type="text" id="telefoneResponsavel" class="form-control" [(ngModel)]="carro.telefoneResponsavel"/>
+                        <label mdbLabel class="form-label" for="telefoneResponsavel">Telefone: </label>
+                    </mdb-form-control>
+                    <br>
+
+                    <mdb-form-control>
+                        <input mdbInput type="email" id="emailResponsavel" class="form-control" [(ngModel)]="carro.emailResponsavel"/>
+                        <label mdbLabel class="form-label" for="emailResponsavel">Email: </label>
+                    </mdb-form-control>
+                    <br>
+
+                    <h4>Dados do Orçamento:</h4>
+                    <br>
+
+                    <mdb-form-control>
+                        <input mdbInput type="text" id="descricaoOrcamento" class="form-control" [(ngModel)]="carro.descricaoOrcamento"/>
+                        <label mdbLabel class="form-label" for="descricaoOrcamento">Descrição: </label>
+                    </mdb-form-control>
+                    <br>
+
+                    <h4>Produto/Serviço:</h4>
+                    <a [routerLink]="'/admin/marcas/new'">
+                        + Adicionar Produto/Serviço
+                    </a>
+                    <br>
+                    <br>
+
+                    <h4>Logo Marca:</h4>
+                    <mdb-form-control>
+                        <input type="file" class="arquivo">
+                    </mdb-form-control>
+                    <br>
+                    <button type="button" class="btn btn-primary btn-rounded" mdbRipple (click)="save()">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

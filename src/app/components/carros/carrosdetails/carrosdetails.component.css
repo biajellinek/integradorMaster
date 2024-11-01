@@ -1,0 +1,46 @@
+#conteiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.col-lg-10 {
+    max-width: 800px; /* Ajuste conforme necessário */
+    margin: auto;
+}
+
+.arquivo {
+    margin-top: 25px;
+    border-radius: 8px; /* Bordas arredondadas */
+    background-color: #ffffff; /* Fundo branco */
+    border: 2px solid #308aeb; /* Borda azul */
+    margin-left: 159px; /* Margem à esquerda */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    padding: 8px 15px; /* Espaçamento interno */
+    transition: all 0.3s ease; /* Transição suave para todas as propriedades */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.arquivo:hover {
+    background-color: #becedc; /* Fundo levemente azul ao passar o mouse */
+    border-color: #0056b3; /* Borda muda para um azul mais escuro */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada ao passar o mouse */
+}
+
+.arquivo:active {
+    transform: scale(0.98); /* Efeito de pressão quando clicado */
+}
+
+.arquivo p {
+    margin: 0; /* Remove margens do parágrafo, se houver */
+    color: #333; /* Cor do texto */
+    font-weight: 500; /* Negrito */
+    font-size: 14px; /* Tamanho da fonte */
+}

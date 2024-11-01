@@ -1,0 +1,49 @@
+<br>
+<div class="conteiner" id="conteiner">
+    <div class="row">
+        <div class="col-lg-10">
+            <div class="card">
+                <div class="card-body">
+
+                    <h3 class="centralizar">Cadastro de Novos Serviços/Produtos</h3>
+                    <br>
+
+                    <mdb-form-control>
+                        <input mdbInput type="text" id="nome" class="form-control" [(ngModel)]="servico.nome"/>
+                        <label mdbLabel class="form-label" for="nome">Nome: </label>
+                    </mdb-form-control>
+                    <br>
+
+                    <mdb-form-control>
+                        <input mdbInput type="text" id="unidade" class="form-control" [(ngModel)]="servico.unidade"/>
+                        <label mdbLabel class="form-label" for="unidade">Unidade: </label>
+                    </mdb-form-control>
+                    <br>
+
+
+                    <h3>Cadastro de Serviços/Produtos</h3>
+                    <mdb-form-control>
+                        <input mdbInput type="number" id="preco" class="form-control" [(ngModel)]="servico.preco"/>
+                        <label mdbLabel class="form-label" for="preco">Preço: </label>
+                    </mdb-form-control>
+                    <br>
+
+                    <mdb-form-control>
+                        <input mdbInput type="text" id="tipo" class="form-control" [(ngModel)]="servico.tipo"/>
+                        <label mdbLabel class="form-label" for="tipo">Tipo: </label>
+                    </mdb-form-control>
+                    <br>
+
+                    <mdb-form-control>
+                        <input mdbInput type="number" id="total" class="form-control" [(ngModel)]="servico.total"/>
+                        <label mdbLabel class="form-label" for="total">Total: </label>
+                    </mdb-form-control>
+                    <br>
+
+                    <button type="button" class="btn btn-primary btn-rounded" (click)="save()">Salvar</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

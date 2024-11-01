@@ -1,0 +1,59 @@
+<br>
+<div class="conteiner" id="conteiner">
+    <div class="row">
+        <div class="col-lg-10">
+            <div class="card">
+                <div class="card-body">
+                    <h3>Listagem de Serviços</h3>
+                    <div class="direita">
+                        <a type="button" class="btn btn-primary btn-rounded" mdbRipple href = "/admin/marcas/new">Novo</a>
+                    </div>
+                    
+                    <br>
+                    <table border="1" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>Unidade</th>
+                                <th>Preço</th>
+                                <th>Tipo</th>
+                                <th>Total</th>
+                                <th class="direita">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let servico of listaServicos; trackBy: trackById">
+                                <td>{{ servico.id }}</td>
+                                <td>{{ servico.nome }}</td>
+                                <td>{{ servico.unidade }}</td>
+                                <td>{{ servico.preco | currency:'BRL':'symbol' }}</td>
+                                <td>{{ servico.tipo }}</td>
+                                <td>{{ servico.total | currency:'BRL':'symbol'}}</td>
+
+                                <td class="direita">
+                                    <button type="button" class="btn btn-secondary btn-rounded" mdbRipple (click)="selectServico(servico)">Selecionar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h4>Serviço Selecionado:</h4>
+                    <div *ngIf="servicoSelecionado">
+                        <p><strong>ID:</strong> {{ servicoSelecionado.id }}</p>
+                        <p><strong>Nome:</strong> {{ servicoSelecionado.nome }}</p>
+                        <p><strong>Unidade:</strong> {{ servicoSelecionado.unidade }}</p>
+                        <p><strong>Preço:</strong> {{ servicoSelecionado.preco | currency:'BRL':'symbol' }}</p>
+                        <p><strong>Tipo:</strong> {{ servicoSelecionado.tipo }}</p>
+                        <p><strong>Total:</strong> {{ servicoSelecionado.total | currency:'BRL':'symbol'}}</p>
+
+                    </div>
+
+                    <button type="button" class="btn btn-primary btn-rounded centralizar" mdbRipple [routerLink]="['/admin/carros/new']">Continuar orcamento</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
